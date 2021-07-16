@@ -10,10 +10,10 @@
 	contact_levels = list(1, 2, 3, 4)
 	player_levels = list(1, 2, 3, 4)
 	base_turf_by_z = list(
-		"1" = /turf/simulated/floor/asteroid/ash/rocky,
-		"2" = /turf/simulated/floor/asteroid/ash/rocky,
-		"3" = /turf/simulated/floor/asteroid/ash/rocky,
-		"4" = /turf/simulated/floor/asteroid/ash/rocky,
+		"1" = /turf/unsimulated/floor/asteroid/ash/rocky,
+		"2" = /turf/unsimulated/floor/asteroid/ash/rocky,
+		"3" = /turf/unsimulated/floor/asteroid/ash/rocky,
+		"4" = /turf/unsimulated/floor/asteroid/ash/rocky,
 	)
 
 	station_name = "NSS Aurora"
@@ -24,7 +24,6 @@
 	boss_short = "CentCom"
 	company_name = "NanoTrasen"
 	company_short = "NT"
-	system_name = "Tau Ceti"
 
 	command_spawn_enabled = FALSE
 	command_spawn_message = "Welcome to the Odin! Simply proceed down and to the right to board the shuttle to your workplace!"

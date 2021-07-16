@@ -59,8 +59,8 @@
 			T.ChangeTurf(/turf/simulated/lava)
 			error = /turf/simulated/lava
 		if(0.46 to 0.58)
-			T.ChangeTurf(/turf/simulated/floor/asteroid/basalt)
-			error = /turf/simulated/floor/asteroid/basalt
+			T.ChangeTurf(/turf/unsimulated/floor/asteroid/basalt)
+			error = /turf/unsimulated/floor/asteroid/basalt
 		if(0.59 to 1)
 			T.ChangeTurf(/turf/simulated/mineral/surface)
 			error = /turf/simulated/mineral/surface
@@ -81,7 +81,7 @@
 			var/turf/below = GET_BELOW(T)
 			if(below)
 				if(below.density)
-					T.ChangeTurf(/turf/simulated/floor/asteroid/basalt)
+					T.ChangeTurf(/turf/unsimulated/floor/asteroid/basalt)
 				else
 					T.ChangeTurf(/turf/simulated/open)
 
@@ -89,7 +89,7 @@
 	descriptor = "shallow"   // Display name.
 
 	target_turf = /turf/unsimulated/mask
-	error = /turf/simulated/floor/asteroid/basalt
+	error = /turf/unsimulated/floor/asteroid/basalt
 	var/chasmseed
 
 /datum/terrain_map/shallow/markTurf(var/turf/T)
@@ -103,12 +103,12 @@
 				var/turf/below = GET_BELOW(T)
 				if(below)
 					if(below.density)
-						T.ChangeTurf(/turf/simulated/floor/asteroid/basalt)
+						T.ChangeTurf(/turf/unsimulated/floor/asteroid/basalt)
 					else
 						T.ChangeTurf(/turf/simulated/open/chasm)
 			else
-				T.ChangeTurf(/turf/simulated/floor/asteroid/basalt)
-			error = /turf/simulated/floor/asteroid/basalt
+				T.ChangeTurf(/turf/unsimulated/floor/asteroid/basalt)
+			error = /turf/unsimulated/floor/asteroid/basalt
 		if(0 to 0.4)
 			T.ChangeTurf(/turf/simulated/mineral/surface)
 			error = /turf/simulated/mineral/surface
@@ -127,7 +127,7 @@
 	..()
 	switch(round(perlin(T.x, T.y, T.z + seed, scale, octaves, persistence), 0.01))
 		if(0 to 0.5)
-			T.ChangeTurf(/turf/simulated/floor/asteroid/basalt)
+			T.ChangeTurf(/turf/unsimulated/floor/asteroid/basalt)
 		else
 			T.ChangeTurf(/turf/simulated/mineral/surface)
 
@@ -161,7 +161,7 @@
 /datum/terrain_map/flora/mushrooms
 	descriptor = "mushroom"   // Display name.
 
-	target_turf = /turf/simulated/floor/asteroid/basalt
+	target_turf = /turf/unsimulated/floor/asteroid/basalt
 
 /datum/terrain_map/flora/mmushrooms/markTurf(var/turf/T)
 	..()
